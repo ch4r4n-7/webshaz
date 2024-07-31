@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?php
-require_once('/var/www/html/websha/load.php');
-?>
+
 <html>
     <head>
         <title>Testing</title>
