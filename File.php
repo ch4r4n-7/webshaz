@@ -19,7 +19,7 @@ if(isset($_FILES['file'])){
 
     $fout = substr($out,$a,($b-$a)+2);
 
-    echo ($a.$b);
+    
     echo "<pre>$fout</pre>";
     
 
