@@ -7,21 +7,20 @@ if(isset($_FILES['file'])){
     $file_tmp = $_FILES['file']['tmp_name'];
     $file_type = $_FILES['file']['type'];
     $file_ext= pathinfo($file_name, PATHINFO_EXTENSION);
-    echo $file_name;
-  
-    $myfile = fopen($file_name, "r") or die("Unable to open file!");
-    echo fread($myfile,filesize($file_name));
-    //$my1file = fopen("new.txt", "w") or die("Unable to open file!");
-    //fwrite($my1file,$myfile);
-
-    fclose($myfile);
-    //fclose($my1file);
-
-    $efile= 'flawfinder '.$file_name;
-    echo shell_exec('pwd');
-    $out = shell_exec($efile);
     
-    echo "<pre>$out</pre>";
+  
+  
+    
+    $efile= 'flawfinder '.$file_name;
+    
+    $out = shell_exec($efile);
+    $a = strpos($out,"FINAL");
+    $b = strrpos($out,"1");
+
+    $fout = substr($out,$a,($b-$a)+2);
+
+    echo ($a.$b);
+    echo "<pre>$fout</pre>";
     
 
             
