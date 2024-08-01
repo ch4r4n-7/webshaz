@@ -4,6 +4,7 @@ require_once('head.php');
 
 <body>
         <div class="header">
+	    <img src="Icons/laptop-code-solid 1.png" alt="logo" class="logo">
             <h1 class="title">Webshaz</h1>
         </div>
         <div class="container">
